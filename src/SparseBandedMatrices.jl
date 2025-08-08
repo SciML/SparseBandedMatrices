@@ -229,4 +229,6 @@ function LinearAlgebra.mul!(C :: Matrix{T}, A:: SparseBandedMatrix{T}, B :: Spar
     C
 end
 
+export SparseBandedMatrix, size, getindex, setindex!, setdiagonal!, mul!
+
 end

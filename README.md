@@ -10,8 +10,18 @@
 [![ColPrac: Contributor's Guide on Collaborative Practices for Community Packages](https://img.shields.io/badge/ColPrac-Contributor%27s%20Guide-blueviolet)](https://github.com/SciML/ColPrac)
 [![SciML Code Style](https://img.shields.io/static/v1?label=code%20style&message=SciML&color=9558b2&labelColor=389826)](https://github.com/SciML/SciMLStyle)
 
-A fast implementation of SparseBandedMatrices in Julia. Primarily developed for use in a Butterfly LU factorization implemented in [RecursiveFactorization.jl] (https://github.com/JuliaLinearAlgebra/RecursiveFactorization.jl) and [LinearSolve.jl](https://github.com/SciML/LinearSolve.jl).
+A fast implementation of Sparse Banded Matrices in Julia. Primarily developed for use in a Butterfly LU factorization implemented in [RecursiveFactorization.jl](https://github.com/JuliaLinearAlgebra/RecursiveFactorization.jl) and [LinearSolve.jl](https://github.com/SciML/LinearSolve.jl).
 
 ## Examples
+```julia
+using SparseBandedMatrices
+
+A = SparseBandedMatrix{Float64}(undef, 5, 5)
+A[1,1] = 5
+setdiagonal!(A, [3,4,5], true) # sets the third diagonal from the bottom to have the values 3, 4, and 5
+
+B = SparseBandedMatrix{Float64}([1, 8], [[3], [-2, 5, 1, 3]], 6, 6)
+```
 
 ## Intended Considerations
+The implementation of SparseBandedMatrices is designed to be fast for matrix and vector multiplications. 
