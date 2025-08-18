@@ -5,7 +5,7 @@
 [![Dev Documentation](https://img.shields.io/badge/docs-dev-blue.svg)](https://docs.sciml.ai/SparseBandedMatrices/dev/)
 
 [![CI](https://github.com/SciML/SparseBandedMatrices.jl/actions/workflows/Tests.yml/badge.svg)](https://github.com/SciML/SparseBandedMatrices.jl/actions/workflows/Tests.yml)
-[![codecov](https://codecov.io/gh/SciML/SparseBandedMatrices.jl/branch/master/graph/badge.svg?)](https://codecov.io/gh/SciML/SparseBandedMatrices.jl)
+[![codecov](https://codecov.io/gh/SciML/SparseBandedMatrices.jl/branch/main/graph/badge.svg?)](https://codecov.io/gh/SciML/SparseBandedMatrices.jl)
 [![Package Downloads](https://shields.io/endpoint?url=https://pkgs.genieframework.com/api/v1/badge/SparseBandedMatrices)](https://pkgs.genieframework.com?packages=SparseBandedMatrices)
 [![Aqua QA](https://raw.githubusercontent.com/JuliaTesting/Aqua.jl/master/badge.svg)](https://github.com/JuliaTesting/Aqua.jl)
 

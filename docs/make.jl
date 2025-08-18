@@ -12,7 +12,7 @@ makedocs(;
     format = Documenter.HTML(;
         prettyurls = get(ENV, "CI", "false") == "true",
         canonical = "https://docs.sciml.ai/SparseBandedMatrices/stable/",
-        edit_link = "master",
+        edit_link = "main",
         assets = String[],
     ),
     pages = [
@@ -22,5 +22,5 @@ makedocs(;
 
 deploydocs(;
     repo = "github.com/SciML/SparseBandedMatrices.jl",
-    devbranch = "master",
+    devbranch = "main",
 )
