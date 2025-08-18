@@ -1,0 +1,26 @@
+name: Downgrade
+on:
+  pull_request:
+    branches:
+      - master
+    paths-ignore:
+      - 'docs/**'
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - 'docs/**'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: julia-actions/setup-julia@v2
+        id: setup-julia
+        with:
+          version: '1'
+      - uses: julia-actions/julia-downgrade-compat@v2
+        with:
+          julia_version: ${{ steps['setup-julia'].outputs.julia-version }}
+      - uses: julia-actions/julia-buildpkg@v1
+      - uses: julia-actions/julia-runtest@v1
