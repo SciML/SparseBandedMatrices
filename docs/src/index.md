@@ -2,7 +2,7 @@
 
 ## Overview
 
-A fast implementation of Sparse Banded Matrices in Julia. Primarily developed for use in a Butterfly LU factorization implemented in [RecursiveFactorization.jl](https://github.com/JuliaLinearAlgebra/RecursiveFactorization.jl) and [LinearSolve.jl](https://github.com/SciML/LinearSolve.jl).
+A fast implementation of Sparse Banded Matrices in Julia. 
 
 ## Installation
 
