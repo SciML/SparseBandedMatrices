@@ -1,6 +1,7 @@
 using SafeTestsets, Test
 
 @testset "SparseBandedMatrices" begin
+    @safetestset "Quality Assurance" include("qa.jl")
 
     @safetestset "Constructors" begin
         using SparseBandedMatrices
@@ -13,11 +14,11 @@ using SafeTestsets, Test
         A[1, 3] = 5
         @test A[1, 3] == 5.0
 
-        @test size(A) == (4,4)
+        @test size(A) == (5,5)
     end
 
     @safetestset "Multiplication" begin
-        using SparseBandedMatrices
+        using SparseBandedMatrices, Random
         dim = 5000
         x = rand(10:75)
         diag_vals = Vector{Vector{Float64}}(undef, x)
