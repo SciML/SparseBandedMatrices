@@ -76,7 +76,7 @@ function Base.setindex!(M :: SparseBandedMatrix{T}, val, i :: Int, j :: Int, I :
         insert!(M.indices, ind, wanted_ind)
         insert!(M.diags, ind, diagvals isa Vector{T} ? diagvals : convert(Vector{T}, diagvals)::Vector{T}) 
     else
-        for i in 1 : eachindex(diagvals)
+        for i in eachindex(diagvals)
             M.diags[ind][i] = diagvals[i] isa T ? diagvals[i] : convert(T, diagvals[i])::T
         end
     end
